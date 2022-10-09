@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Skolo</title>
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<style type="text/css">
+  body{
+  background-color: #fff;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eee; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+.wrapper{
+   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #651FFF;
+
+}
+
+.main{
+  background-color: #eee;
+  width: 320px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 6px 0px 0px 0px;
+}
+.scroll{
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 385px;
+}
+.img1{
+  border-radius: 50%;
+  background-color: #66BB6A;
+}
+.name{
+  font-size: 8px;
+
+}
+.msg{
+  background-color: #fff;
+  font-size: 11px;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: #3e3c3c;
+}
+.between{
+  font-size: 8px;
+  font-weight: 500;
+  color: #a09e9e;
+}
+.navbar{
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.form-control{
+  font-size: 12px;
+  font-weight: 400;
+  width: 230px;
+  height: 30px;
+  border: none;
+
+}
+form-control: focus{
+  box-shadow: none;
+  overflow: hidden;
+  border: none;
+}
+.form-control:focus{
+  box-shadow: none !important;
+}
+.icon1{
+  color: #7C4DFF !important;
+  font-size: 18px !important; 
+  cursor: pointer;
+}
+
+.icon2{
+  color: #512DA8 !important;
+    font-size: 18px !important;
+    position: relative;
+    left: 8px;
+    padding: 0px;
+    cursor: pointer;
+
+}
+
+
+.icondiv{
+  
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  position: relative;
+  bottom: 1px;
+
+}
+
+#submit-button{
+  height: 20px;
+  width: 20px;
+}
+</style>
+  </head>
+  <body>
+
+   
+  <div class="wrapper">
+  <div class="main">
+    <div class="px-2 scroll" id="left">
+      
+      <!-- left  -->
+      <!-- <div id="left"> </div> -->
+<!--     <div class="d-flex align-items-center">
+      <div class="text-left pr-1"><img src="static/bot.png" width="30" class="img1" /></div>
+      <div class="pr-2 pl-1">
+        <span class="name">Bot</span>
+        <p id="response" class="msg"></p>
+      </div>
+    </div> -->
+
+    <!-- RIGHT  -->
+<!--     <div class="d-flex align-items-center text-right justify-content-end ">
+        <div class="pr-2">
+          <span class="name">Dr. Hendrikson</span>
+          <p class="msg">Let's jump on a video call</p>
+        </div>
+        <div><img src="static/user.png" width="30" class="img1" /></div>
+        
+    </div> -->
+
+
+    </div>
+
+
+    <!-- bottom bar  -->
+    <nav class="navbar bg-white navbar-expand-sm d-flex justify-content-between">
+      <!-- <input type="text number" name="text" class="form-control" placeholder="Type a message..."> -->
+      <input class="form-control" type="text" name="question" id="question">
+      <button class="btn btn-primary" id="submit-button"><span class="fa fa-arrow-circle-right icon2"></span></button>
+      
+<!--       <div class="icondiv d-flex justify-content-end align-content-center text-center ml-2">
+        <i class="fa fa-arrow-circle-right icon2"></i>
+      </div> -->
+    </nav>
+    
+  </div>
+
+  </div>
+
+    <script src="/static/jquery.min.js" ></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    
+    <script>
+
+
+      jQuery(document).ready(function() {
+
+        $("#question").keypress(function(event) {
+          console.log("keypress")
+          if (event.keyCode === 13) {
+            $("#submit-button").click();
+          }
+        });
+
+        $("#submit-button").click(function(e) {
+          e.preventDefault();
+
+          console.log("logging submit button")
+          console.log($("#question").val());
+          $.ajax({
+              type: "POST",
+              url: "/chatbot",
+              data: {
+                  question: $("#question").val()
+              },
+              success: function(result) {
+
+                
+
+                var left = 
+                    '<div class="d-flex align-items-center">'+
+                    '<div class="text-left pr-1"><img src="static/bot.png" width="30" class="img1" /></div>'+
+                    '<div class="pr-2 pl-1">'+
+                      '<span class="name">Bot </span>'+
+                      '<p id="response" class="msg">'+ result.response+ ' </p> <br>'+
+                    '</div>'+
+                  '</div>'
+
+                var right = 
+                    '<div class="d-flex align-items-center text-right justify-content-end ">'+
+                    '<div class="pr-2">'+
+                      '<span class="name">Dr. Hendrikson</span>'+
+                      '<p class="msg">'+$("#question").val()+'</p>'+
+                    '</div>'+
+                    '<div><img src="static/user.png" width="30" class="img1" /></div>'+
+                '</div>'
+                // $("#response").append(right);
+                $("#left").append(right).scroll();
+                $("#left").append(left).scroll();
+                // $("#response").append("<br>Me: "+$("#question").val()+ "<br> Karabo: "+result.response);
+                $("#question").val("")
+
+                var elem = document.getElementById('left');
+                elem.scrollTop = elem.scrollHeight;
+              },
+              error: function(result) {
+                  alert('error');
+              }
+          });
+
+
+
+        });
+
+      });
+
+
+    </script>
+
+
+    <!-- <div class="container">
+      <h1>DSLAB-II Chatbot by Batch 1</h1>
+      <br>
+      <hr>
+      <br>
+        <br>
+        <div class="row">
+          <div class="col">
+            <p id="response"></p>
+          </div>
+        </div>
+                <div class="row">
+          <div class="col-lg-9">
+            <input class="form-control" type="text" name="question" id="question">
+          </div>
+          <div class="col-lg-3">
+            <button class="btn btn-primary btn-block" id="submit-button">Send</button>
+          </div>
+        </div>
+
+    </div>
+
+    <script src="/static/jquery.min.js" ></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <script>
+
+
+      jQuery(document).ready(function() {
+
+        $("#submit-button").click(function(e) {
+          e.preventDefault();
+
+
+          $.ajax({
+              type: "POST",
+              url: "/chatbot",
+              data: {
+                  question: $("#question").val()
+              },
+              success: function(result) {
+                $("#response").append("<br>Me: "+$("#question").val()+ "<br> Karabo: "+result.response);
+                $("#question").val("")
+              },
+              error: function(result) {
+                  alert('error');
+              }
+          });
+
+
+
+        });
+
+      });
+
+
+    </script>
+ -->
+  </body>
+</html>
